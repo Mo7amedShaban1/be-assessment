@@ -18,7 +18,10 @@ Build an uptime monitoring RESTful API server that allows authenticated users to
 
 ## Room for Improvement
 
-As the number of URL checks increases, it can impose heavy tasks on the server, causing performance to slow down and blocking the main thread. A recommended approach to mitigate this issue is to separate URL checks into its own process. The bull job queue offers a sandbox feature that provides this capability out of the box. Additionally, utilizing a message queue and worker processes offers several benefits, such as the ability to process a large number of URL checks in parallel, thereby improving performance significantly. This decouples the URL check operation from the main server, enabling the server to focus on other tasks.
+As the number of URL checks increases, it can impose heavy tasks on the server, causing performance to slow down and blocking the main thread. 
+A recommended approach to mitigate this issue is to separate URL checks into its own process. The `bull` job queue offers a sandbox feature that provides this capability out of the box. 
+
+Additionally, utilizing a `message queue` and `worker processes` offers several benefits, such as the ability to process a large number of URL checks in parallel, thereby improving performance significantly. This decouples the URL check operation from the main server, enabling the server to focus on other tasks.
 
 ## API Documentation
 
