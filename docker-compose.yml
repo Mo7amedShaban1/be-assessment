@@ -1,0 +1,29 @@
+version: '3'
+services:
+  mongodb: 
+    image: mongo:6
+    restart: always
+    container_name: mongodb
+    volumes:
+      - /usr/local/var/mongodb:/data/db
+
+  redis:
+    image: "redis:latest"
+    restart: always
+    container_name: redis
+    ports:
+      - 6379:6379
+
+  api:
+    restart: always
+    container_name: api
+    build:
+      dockerfile: DockerFile
+      context: .
+    volumes:
+      - /app/node_modules
+      - ./:/app 
+    env_file:
+      - ./.env.development
+    ports:
+      - 8080:8080

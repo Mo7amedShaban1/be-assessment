@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "outDir": "./dist/",
+        "baseUrl": "./",
+        "paths": {
+            "@common/*": ["src/common/*"],
+            "@modules/*": ["src/modules/*"]
+            // "@middlewares/*": ["src/middlewares/*"]
+        }
+        // "plugins": [
+        //     {
+        //         "name": "tsconfig-paths",
+        //         "baseUrl": "./",
+        //         "paths": {
+        //             "@services/*": ["src/services/*"]
+        //         }
+        //     }
+        // ]
+    }
+}
